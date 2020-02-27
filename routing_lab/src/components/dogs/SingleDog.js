@@ -4,7 +4,7 @@ import Dog from './Dog'
 
 class SingleDog extends Component{
     state= {
-        DogImg: null
+        dogImg: null
     }
 
     getDogPic = async () => {
@@ -12,7 +12,7 @@ class SingleDog extends Component{
         try{
             let res = await axios.get(url)
             debugger
-            this.setState({DogImg: res.data.message})
+            this.setState({dogImg: res.data.message})
 
             
         }catch(error){
@@ -20,17 +20,17 @@ class SingleDog extends Component{
             
         }
     }
-
     handleButton = (e) => {
-      
+      this.getDogPic()
     }
+
     render(){
         
         return(
             <div>
-            {Dog}
+            <Dog img={this.state.dogImg}/>
                 SingleDog Div 
-                <button onClick={this.getDogPic}>Get random dog</button>
+                <button onClick={this.handleButton}>Get random dog</button>
             </div>
         )
     }
