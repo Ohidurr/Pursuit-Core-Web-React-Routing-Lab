@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       This is a test
     <Route path={"/dog/random"} component = {SingleDog} />
-      <SingleDog/>
+      
     </div>
   );
 }

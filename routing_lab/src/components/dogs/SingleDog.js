@@ -22,12 +22,10 @@ class SingleDog extends Component{
     }
 
     handleButton = (e) => {
-        return(
-            <Dog img={Dog}/>
-        )
+      
     }
     render(){
-        this.handle
+        
         return(
             <div>
             {Dog}
