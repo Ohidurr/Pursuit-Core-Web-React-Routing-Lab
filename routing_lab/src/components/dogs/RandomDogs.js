@@ -11,7 +11,7 @@ class RandomDogs extends Component {
     getRandomDog = async() => {
         let number = this.props.match.params.num
         let url = `https://dog.ceo/api/breeds/image/random/${number}`
-        debugger
+        
 
         try{
             let res = await axios.get(url)
