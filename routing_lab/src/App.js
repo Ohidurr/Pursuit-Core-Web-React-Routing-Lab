@@ -4,6 +4,7 @@ import SingleDog from './components/dogs/SingleDog'
 import RandomDogs from './components/dogs/RandomDogs'
 import DogBreed from './components/dogs/DogBreed'
 import { Route, Switch } from 'react-router-dom'
+import NavBar from './components/NavBar'
 
 
 
@@ -15,6 +16,7 @@ function App() {
       <Route path={"/dog/random"} component={SingleDog} />
       <Route path={"/dog/:breed"} component={DogBreed} />
       </Switch>
+      <NavBar/>
     </div>
   );
 }
