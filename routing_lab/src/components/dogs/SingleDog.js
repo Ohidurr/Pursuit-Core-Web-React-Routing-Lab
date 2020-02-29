@@ -8,10 +8,10 @@ class SingleDog extends Component{
     }
 
     getDogPic = async () => {
-        const url = 'https://dog.ceo/api/breeds/image/random'
+        const url = 'https://dog.ceo/api/breeds/image/random/'
         try{
             let res = await axios.get(url)
-            debugger
+            
             this.setState({dogImg: res.data.message})
 
             
@@ -28,8 +28,9 @@ class SingleDog extends Component{
         
         return(
             <div>
+            <h1> Random Dog </h1>
             <Dog img={this.state.dogImg}/>
-                SingleDog Div 
+                
                 <button onClick={this.handleButton}>Get random dog</button>
             </div>
         )

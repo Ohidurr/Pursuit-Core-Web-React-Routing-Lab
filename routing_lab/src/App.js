@@ -1,15 +1,18 @@
 import React from 'react';
 import './App.css';
 import SingleDog from './components/dogs/SingleDog'
-import { Route } from 'react-router-dom'
+import RandomDogs from './components/dogs/RandomDogs'
+import { Route, Switch } from 'react-router-dom'
+
 
 
 function App() {
   return (
     <div className="App">
-      This is a test
-    <Route path={"/dog/random"} component = {SingleDog} />
-      
+    <Switch>
+      <Route path = {"/dog/random/:num"} component={RandomDogs}/>
+      <Route path={"/dog/random"} component={SingleDog} />
+      </Switch>
     </div>
   );
 }
